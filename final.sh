@@ -19,7 +19,7 @@ if [ ! -d $parent_dir ]; then
 elif [ -d $parent_dir ]; then
   for FILE in "${FILES[@]}"
   do
-    sudo rsync -azvv -e "ssh -i ./cloudconformance.pem" --checksum -r "$FILE" "$REMOTE_SERVER:$REMOTE_DIRECTORY"
+    sudo rsync -azvv -e "ssh -i /path/to/your/.pem file" --checksum -r "$FILE" "$REMOTE_SERVER:$REMOTE_DIRECTORY"
   done
 
 fi
